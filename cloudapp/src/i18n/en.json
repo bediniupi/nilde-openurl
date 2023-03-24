@@ -1,0 +1,24 @@
+{
+    "HelpTitle": "Help",
+    "HelpText": "<p>For more help with this app, or to report a problem, please open an issue by clicking on the link below.</p><p><a href=\"https://github.com/bediniupi/nilde-openurl/issues\" target=\"_blank\">Open an issue</a></p>",
+    "UseBorrowingPage": "To use this app please open the borrowing requests page. With this app you can send a request to Nilde via OpenUrl.",
+    "SendToNildeButton": "Send to Nilde",
+    "RequestNoNilde": "The request selected cannot be sent to Nilde",
+    "SelectRequest": "Click and select a borrowing request",
+    "RequestRetrieved" : "Request data retrieved:",
+    "AlreadySent": "Warning: this request is already sent to Nilde recently",
+    "TitleTag": "Title: ",
+    "AuthorTag": "Author: ",
+    "YearTag": "Year: ",
+    "JournalTag": "Journal: ",
+    "PagesTag": "Pages: ",
+    "VolumeTag": "Volume: ",
+    "IssueTag": "Issue: ",
+    "RequesterTag": "Requester: ",
+    "UpdateManually": "Please update manually thhe request status in Alma.",
+    "RequestSent": "Request sent to Nilde",
+    "RequestAlreadySent": "Request resent to Nilde",
+    "RefreshFailed": "Failed to refresh page",
+    "BackFailed": "Failed to go back"
+
+}

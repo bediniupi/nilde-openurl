@@ -1,0 +1,59 @@
+{
+   "id": "nilde-openurl",
+   "title": [
+      {
+         "lang": "it",
+         "text": "Nilde OpenUrl"
+      },
+      {
+         "lang": "en",
+         "text": "Nilde OpenUrl"
+      }
+   ],
+   "description": [
+      {
+         "lang": "it",
+         "text": "Invia una richiesta in uscita a Nilde via openurl"
+      },
+      {
+         "lang": "en",
+         "text": "Send a borrowing request to Nilde via openurl"
+      }
+   ],
+   "subtitle": [
+      {
+         "lang": "it",
+         "text": "Invia una richiesta in uscita a Nilde via openurl"
+      },
+      {
+         "lang": "en",
+         "text": "Send a borrowing request to Nilde via openurl"
+      }
+   ],
+   "author": "Luisella Consumi (Università degli Studi di Firenze), Nazzareno Bedini (Università di Pisa), Francesca Mocchi (Università degli Studi di Bergamo) per ITALE RS Working Group",
+   "entities": [
+      "BORROWING_REQUEST"
+   ],
+   "pages": {
+      "help": "/#/help"
+   },
+   "icon": {
+      "type": "url",
+      "value": "/assets/NildeOpenurlLogo.png"
+   },
+   "fullscreen": {
+      "allow": true,
+      "open": false
+   },
+   "contentSecurity": {
+      "connectSrc": [
+         "https://api.exldevnetwork.net",
+         "https://nilde.bo.cnr.it/"
+      ],
+      "sandbox": {
+         "modals": true,
+         "popups": true
+      }
+   },
+   "license": "https://github.com/ExLibrisGroup/cloudapp-tutorials/raw/tutorials/LICENSE"
+}

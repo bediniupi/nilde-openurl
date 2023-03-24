@@ -1,0 +1,31 @@
+<div *ngIf="!hasRSRequest && !chooseFromList">
+  <p>
+    {{ 'UseBorrowingPage' | translate }}
+  </p>
+</div>
+<div class="eca-actions" *ngIf="hasRSRequest && toNilde">
+  
+  <button mat-flat-button color="primary" (click)="inviaNilde()"> 
+    {{ 'SendToNildeButton' | translate }}
+  </button>
+</div>
+
+<div class="align-center">
+  <h2 [innerHTML]='title'></h2>
+</div>
+
+<div class="loading-shade" *ngIf="loading">
+  <mat-progress-spinner mode="indeterminate" diameter="50"></mat-progress-spinner>
+</div>
+
+<div *ngIf="chooseFromList" >
+<mat-form-field>
+  <mat-label>{{ "SelectRequest" | translate }}</mat-label>
+  <mat-select (selectionChange)="onLoadEntity($event.value)">
+    <mat-option *ngFor="let entity of pageEntities; let i = index" [value]="entity">
+      {{i+1}} - {{entity.description}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+</div>
+
