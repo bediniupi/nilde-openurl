@@ -92,6 +92,8 @@ export class MainComponent implements OnInit, OnDestroy {
     if (this.requestSent[reqid]) requestString = "<strong>" + this.translate.instant('AlreadySent') + "</strong><br />" + requestString;
    
     if (request['chapter']) request['chapter_title'] = (request['chapter'] + " " + request['chapter_title']).trim();
+    request['genre'] = "journal";
+    if (request['citation_type']['value'] == "BK") request['genre'] = "book";
     
     var reqData = {};
     reqData['title'] = this.translate.instant("TitleTag");
@@ -115,8 +117,9 @@ export class MainComponent implements OnInit, OnDestroy {
   
   almaRS2OpenUrl(value: any) {
     
-    const ouBasePar = "url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx";
+    const ouBasePar = "url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx";
     var ouMap = {};
+    ouMap['genre'] = "rft_val_fmt=info:ofi/fmt:kev:mtx:";
     ouMap['author'] = "rft.au=";
     ouMap['author_initials'] = "rft.auinit=";
     ouMap['title'] = "rft.atitle=";
