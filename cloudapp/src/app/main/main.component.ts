@@ -90,13 +90,15 @@ export class MainComponent implements OnInit, OnDestroy {
     const reqid = request['request_id'];
     
     if (this.requestSent[reqid]) requestString = "<strong>" + this.translate.instant('AlreadySent') + "</strong><br />" + requestString;
-    
+   
+    if (request['chapter']) request['chapter_title'] = (request['chapter'] + " " + request['chapter_title']).trim();
     
     var reqData = {};
     reqData['title'] = this.translate.instant("TitleTag");
     reqData['author'] = this.translate.instant("AuthorTag");
     reqData['year'] = this.translate.instant("YearTag");
     reqData['journal_title'] = this.translate.instant("JournalTag");
+    reqData['chapter_title'] = this.translate.instant("ChapterTag");
     reqData['pages'] = this.translate.instant("PagesTag");
     reqData['volume'] = this.translate.instant("VolumeTag");
     reqData['issue'] = this.translate.instant("IssueTag");
@@ -112,19 +114,29 @@ export class MainComponent implements OnInit, OnDestroy {
   }
   
   almaRS2OpenUrl(value: any) {
+    
     const ouBasePar = "url_ver=Z39.88-2004&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx&url_ctx_fmt=info:ofi/fmt:kev:mtx:ctx";
     var ouMap = {};
     ouMap['author'] = "rft.au=";
     ouMap['author_initials'] = "rft.auinit=";
     ouMap['title'] = "rft.atitle=";
     
-    if (value['journal_title'] === "") ouMap['title'] = "rft.title=";
+    if (value['journal_title'] === "") ouMap['title'] = "rft.btitle=";
 
+    ouMap['chapter_title'] = "rft.atitle=";
     ouMap['journal_title'] = "rft.jtitle=";
     ouMap['year'] = "rft.date=";
     ouMap['volume'] = "rft.volume=";
     ouMap['issue'] = "rft.issue=";
     ouMap['pages'] = "rft.pages=";
+    
+    if (value['pages'] && !(value['start_page'] || value['end_page'])) {
+        var sep = value['pages'].indexOf('-'); 
+        const pageArray = [value['pages'].slice(0,sep), value['pages'].slice(sep+1)];
+        value['start_page'] = pageArray[0].trim();
+        value['end_page'] = pageArray[1].trim();
+        }
+    
     ouMap['start_page'] = "rft.spage=";
     ouMap['end_page'] = "rft.epage=";
     ouMap['issn'] = "rft.issn=";
