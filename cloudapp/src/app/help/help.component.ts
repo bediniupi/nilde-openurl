@@ -11,6 +11,7 @@ import { Component, OnInit } from '@angular/core';
   <div class="title">
     <h1>{{ 'HelpTitle' | translate }}</h1>
   </div>
+  <div [innerHTML]="'HelpDescription' | translate"></div>
   <div [innerHTML]="'HelpText' | translate"></div>
   `
 })
