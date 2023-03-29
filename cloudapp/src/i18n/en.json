@@ -1,5 +1,6 @@
 {
-    "HelpTitle": "Help",
+    "HelpTitle": "Help page",
+    "HelpDescription":"<p>Select a borrowing request and click on <em>Send to Nilde</em> button.</p><p>Only new request not sent yet can be sent to Nilde.</p><p>The request status in Alma has to be updated manually.</p><p>Use the article request form for journal's articles or book request form for books chapter/part requests.</p>",
     "HelpText": "<p>For more help with this app, or to report a problem, please open an issue by clicking on the link below.</p><p><a href=\"https://github.com/bediniupi/nilde-openurl/issues\" target=\"_blank\">Open an issue</a></p>",
     "UseBorrowingPage": "To use this app please open the borrowing requests page. With this app you can send a request to Nilde via OpenUrl.",
     "SendToNildeButton": "Send to Nilde",

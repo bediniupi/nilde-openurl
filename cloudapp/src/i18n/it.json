@@ -1,5 +1,6 @@
 {
-    "HelpTitle": "Aiuto",
+    "HelpTitle": "Pagina di aiuto",
+    "HelpDescription":"<p>Selezionare una richiesta in uscita e premere il bottone <em>Invia a Nilde</em>.</p><p>Solo le richieste nuove non ancora spedite possono essere inviate a Nilde.</p><p>Occorre poi aggiornare manualmente lo status della richiesta in Alma.</p><p>Utilizzare il modulo di richiesta articoli per richiedere articoli di riviste o quello di richiesta libro per capitoli/parti di libro.</p>", 
     "HelpText": "<p>Utilizzate il link sottostante per segnalare problemi o per richieste di aiuto:</p><p><a href=\"https://github.com/bediniupi/nilde-openurl/issues\" target=\"_blank\">Apri una segnalazione</a></p>",
     "UseBorrowingPage": "Per usare questa app, naviga alla pagina delle richieste in uscita. Questa app serve per inviare via openurl una richiesta a Nilde.",
     "SendToNildeButton": "Invia a Nilde",
