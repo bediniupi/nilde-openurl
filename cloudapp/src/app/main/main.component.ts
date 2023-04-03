@@ -148,10 +148,10 @@ export class MainComponent implements OnInit, OnDestroy {
     ouMap['place_of_publication'] = "rft.place=";
     ouMap['doi'] = "rft_id=info:doi/";
     ouMap['pmid'] = "rft_id=info:pmid/";
-           
-    var ouParams = encodeURI(ouBasePar);
+        
+    var ouParams = encodeURIComponent(ouBasePar);
     Object.keys(value).forEach(key => {
-        if (key in ouMap && value[key] !== "") ouParams += "&"+encodeURI(ouMap[key]+value[key]);
+        if (key in ouMap && value[key] !== "") ouParams += "&"+encodeURIComponent(ouMap[key]+this.cleanData(value[key], key));
      });
      
      console.log("ouparams: "+ouParams);
@@ -181,8 +181,17 @@ export class MainComponent implements OnInit, OnDestroy {
     this.requestSent[reqid] = true;
     // this.refreshPage();
   }
-
-  
+    
+  cleanData (textdata: any, key: string) {
+    const clArray = ['title', 'author', 'publisher', 'chapter_title', 'journal_title', 'place_of_publication'];
+    const qtArray = ['title', 'journal_title', 'chapter_title'];
+    var cleanText = textdata;
+    // in Nilde's titles fields a single quotation mark is not allowed, substituded with a Right single quotation mark (U+2019), same for brackets
+    if (qtArray.includes(key)) cleanText = cleanText.replace(/'/g, "’").replace(/\[/g, "［ ").replace(/\]/g, "］");
+    // & needs to be encoded in all text fields
+    if (clArray.includes(key)) return cleanText.replace(/&/g, "%26")
+    return cleanText;
+  }  
   async delay(ms: number) {
     return new Promise( resolve => setTimeout(resolve, ms) );
   }
