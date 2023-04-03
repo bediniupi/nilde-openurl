@@ -17,5 +17,9 @@ The request status in Alma has to be updated manually.
 * Nazzareno bedini (Università di Pisa)
 * Francesca Mocchi (Università degli Studi di Bergamo)
 
+## Known issues
+In Nilde title fields text wipes single quote and brackets, actually these characters are replaced with right single quotation mark (U+2019) and 
+fullwidth square bracket (U+FF3B and U+FF3D)
+
 ### About Nilde
 NILDE (Network Inter-Library Document Exchange) is an italian web-based software for the service of Document Supply and Inter-Library Loan.
