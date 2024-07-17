@@ -1,0 +1,11 @@
+@import '~@exlibris/exl-cloudapp-angular-lib/styles/styles';
+@import './main.scss';
+
+@each $color,
+$theme in $cloudapp-color-map {
+    body.cloudapp-theme--#{$color} {
+        @include themed-styles($theme, $app-typography);
+    }
+}
+
+@include global-styles();

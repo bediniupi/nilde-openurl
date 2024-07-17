@@ -1,0 +1,14 @@
+<div class="eca-actions">
+    <button mat-flat-button color="secondary" [routerLink]="['/']"><mat-icon>arrow_back</mat-icon>{{ 'BackButton' | translate }}</button>
+    <button mat-flat-button color="primary" (click)="remove()">{{ 'ResetButton' | translate }}</button>
+</div>
+  <div class="loading-shade" *ngIf="saving">
+    <mat-progress-spinner mode="indeterminate" diameter="50"></mat-progress-spinner>
+  </div>
+  <div *ngIf="settings">
+    <h2 class="example-margin">{{ 'SettingsTitle' | translate }}</h2>
+        <section class="settings-section" *ngFor="let setting of noVisibility(settings.brstatus)"> 
+        <mat-slide-toggle [checked]="setting.active" (change)="activateStatus(setting.code)" labelPosition="after">{{setting.description}}</mat-slide-toggle> 
+      </section>
+    </div>
+

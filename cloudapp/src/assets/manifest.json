@@ -10,16 +10,6 @@
          "text": "Nilde OpenUrl"
       }
    ],
-   "description": [
-      {
-         "lang": "it",
-         "text": "Invia una richiesta in uscita a Nilde via openurl"
-      },
-      {
-         "lang": "en",
-         "text": "Send a borrowing request to Nilde via openurl"
-      }
-   ],
    "subtitle": [
       {
          "lang": "it",
@@ -31,11 +21,22 @@
       }
    ],
    "author": "Luisella Consumi (Università degli Studi di Firenze), Nazzareno Bedini (Università di Pisa), Francesca Mocchi (Università degli Studi di Bergamo) per ITALE RS Working Group",
+   "description": [
+      {
+         "lang": "it",
+         "text": "Invia una richiesta in uscita a Nilde via openurl"
+      },
+      {
+         "lang": "en",
+         "text": "Send a borrowing request to Nilde via openurl"
+      }
+   ],
    "entities": [
       "BORROWING_REQUEST"
    ],
    "pages": {
-      "help": "/#/help"
+      "help": "/#/help",
+      "settings": "/#/settings"
    },
    "icon": {
       "type": "url",

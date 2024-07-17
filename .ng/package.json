@@ -1,0 +1,11 @@
+{
+  "name": "exl-cloudapp-sdk-base",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node ../node_modules/@angular/cli/bin/ng serve",
+    "build": "node ../node_modules/@angular/cli/bin/ng build --prod",
+    "generate": "node ../node_modules/@angular/cli/bin/ng generate",
+    "extract-i18n": "node ../node_modules/@biesbjerg/ngx-translate-extract/bin/cli.js"
+  },
+  "private": true
+}
