@@ -92,6 +92,7 @@ export class MainComponent implements OnInit, OnDestroy {
       this.link = entity.link;
       this.restService.call(entity.link).subscribe(result => {
         this.apiResult = result;
+        this.toNilde = false;
         this.title = "<strong>" + this.translate.instant('RequestNoNilde') + "</strong><br />Status: "+ result['status']['desc'];
         
         for (var key in this.settings['brstatus']) {
